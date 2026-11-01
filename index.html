@@ -1,0 +1,743 @@
+<title>Arun Sundaran</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Arun Sundaran — Lead Mechanical Design Engineer in Huntingdon, UK. Medical devices, semiconductor equipment, IoT products and injection mold design since 2015.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: dark single-scroll portfolio. Starfield hero centred on photo and name; glass cards on near-black; teal (#008080) as the one accent throughout. Deliberately single dark theme. */
+:root{
+  color-scheme:dark;
+  --bg:#06090b; --bg2:#0b1114; --card:rgba(255,255,255,.04); --card-b:rgba(255,255,255,.08); --card-h:rgba(255,255,255,.075);
+  --text:#f3f6f6; --text2:#a3afb1; --text3:#6d7a7c;
+  --teal:#008080; --teal-t:#3cb9b9; --teal2:#0a9e9e; --teal-d:#006666; --glow:rgba(0,128,128,.45); --green:#34c759; --on-teal:#ffffff;
+  --f-display:"Sora","Segoe UI",system-ui,sans-serif;
+  --f-body:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --gl:max(16px,env(safe-area-inset-left,0px)); --gr:max(16px,env(safe-area-inset-right,0px));
+  --tr:.3s cubic-bezier(.25,.1,.25,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{background:var(--bg);color:var(--text);font-family:var(--f-body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+h1,h2,h3,h4{font-family:var(--f-display);margin:0;line-height:1.15;text-wrap:balance}
+p{margin:0}
+strong{color:var(--text);font-weight:600}
+.hlt{color:var(--teal-t);font-weight:600}
+.wrap{max-width:1140px;margin:0 auto;padding-left:var(--gl);padding-right:var(--gr)}
+.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(6,9,11,.72);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--card-b)}
+.nav::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:linear-gradient(90deg,var(--teal-d),var(--teal));transform-origin:left;transform:scaleX(var(--prog,0))}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--f-display);font-weight:700;font-size:17px;color:var(--teal-t)}
+.brand i{display:none}
+.links{display:flex;gap:2px;align-items:center}
+.links a{text-decoration:none;font-size:14.5px;padding:7px 13px;border-radius:999px;color:var(--text2);transition:color var(--tr),background var(--tr)}
+.links a:hover{color:var(--text)}
+.links a.on{color:var(--text)}
+.links a.cvlink{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(0,128,128,.5);color:var(--teal-t);margin-left:6px}
+.links a.cvlink:hover{background:rgba(0,128,128,.12);color:var(--text)}
+.links a.cta{background:var(--teal);color:var(--on-teal);font-weight:700;margin-left:8px;padding:8px 18px}
+.links a.cta:hover,.links a.cta.on{background:var(--teal2);color:var(--on-teal);box-shadow:0 0 22px var(--glow)}
+.burger{display:none;border:1px solid var(--card-b);background:var(--card);color:var(--text);border-radius:999px;padding:7px 14px;font:500 14px var(--f-body);cursor:pointer}
+@media (max-width:1060px){
+  .burger{display:block}
+  .links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:#06090b;box-shadow:0 24px 40px -10px rgba(0,0,0,.8);border-bottom:1px solid var(--card-b);padding:10px var(--gr) 16px var(--gl)}
+  .links:not(.open){display:none}
+  .links a{padding:12px 14px}.links a.cta{margin:6px 0 0;text-align:center}
+}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:56px 40px;background:radial-gradient(ellipse 70% 55% at 50% 30%,rgba(0,128,128,.10),transparent 70%),var(--bg)}
+#stars{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero-in{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;border-radius:999px;background:rgba(0,128,128,.08);border:1px solid rgba(0,128,128,.35);font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-t)}
+.badge b{width:7px;height:7px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,128,128,.7)}70%{box-shadow:0 0 0 9px rgba(0,128,128,0)}100%{box-shadow:0 0 0 0 rgba(0,128,128,0)}}
+.portrait{position:relative;width:132px;height:132px;margin-top:26px}
+.avatar{position:absolute;inset:0;border-radius:50%;overflow:hidden;background:linear-gradient(145deg,var(--teal),#004d4d);display:grid;place-items:center;border:3px solid var(--bg);box-shadow:0 0 0 3px var(--teal),0 0 40px var(--glow)}
+.avatar span{font-family:var(--f-display);font-weight:800;font-size:42px;color:#fff}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.online{position:absolute;right:6px;bottom:8px;width:16px;height:16px;border-radius:50%;background:var(--green);border:3px solid var(--bg)}
+.hero h1{font-size:clamp(48px,8.4vw,92px);font-weight:800;letter-spacing:-.035em;line-height:1.02;margin-top:26px;background:linear-gradient(135deg,#ffffff 0%,#cdeeee 45%,var(--teal-t) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.06em}
+.sub{margin-top:14px;font-size:clamp(17px,2vw,21px);color:var(--text2)}
+.hl{margin-top:12px;font-size:clamp(16px,1.7vw,18px);font-weight:700;color:var(--teal-t)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;font:700 15px var(--f-body);text-decoration:none;cursor:pointer;border:1px solid var(--card-b);background:rgba(0,0,0,.35);color:var(--text);transition:all var(--tr)}
+.btn svg{width:16px;height:16px}
+.btn:hover{border-color:rgba(0,128,128,.6);background:rgba(0,128,128,.08);transform:translateY(-2px)}
+.btn.primary{background:linear-gradient(135deg,var(--teal-d),var(--teal));border-color:transparent;color:var(--on-teal);box-shadow:0 8px 30px -6px var(--glow)}
+.btn.primary:hover{background:linear-gradient(135deg,var(--teal),var(--teal2));box-shadow:0 10px 40px -4px var(--glow)}
+.stats{margin-top:40px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;width:min(600px,100%)}
+.stat{background:var(--card);border:1px solid var(--card-b);border-radius:16px;padding:16px 12px;transition:all var(--tr)}
+.stat:hover{background:var(--card-h);border-color:rgba(0,128,128,.4);transform:translateY(-3px)}
+.stat b{display:block;font-family:var(--f-display);font-size:30px;font-weight:800;color:var(--teal-t);line-height:1.15}
+.stat span{font-size:13px;color:var(--text2)}
+.scroll{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:34px;color:var(--text3);text-decoration:none}
+.scroll em{width:22px;height:34px;border:2px solid var(--text3);border-radius:12px;position:relative}
+.scroll em::after{content:"";position:absolute;left:50%;top:6px;width:3px;height:7px;border-radius:2px;background:var(--teal);transform:translateX(-50%);animation:wheel 1.8s infinite}
+@keyframes wheel{60%{top:16px;opacity:0}100%{top:6px;opacity:0}}
+@media (max-width:480px){.badge{font-size:10.5px;letter-spacing:.06em;padding:7px 12px}.stats{gap:8px}.stat b{font-size:24px}.btn{padding:12px 18px}}
+
+/* sections */
+section{padding-block:84px;position:relative}
+section + section::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(1140px,calc(100% - 32px));height:1px;background:linear-gradient(90deg,transparent,rgba(0,128,128,.25),transparent)}
+.head{margin-bottom:40px;display:grid;gap:12px;max-width:720px}
+.head.center{margin-inline:auto;text-align:center;justify-items:center}
+.kicker{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-t)}
+.head h2{font-size:clamp(32px,4.4vw,44px);font-weight:800;letter-spacing:-.025em}
+.head p{color:var(--text2);font-size:16.5px}
+.gcard{background:var(--card);border:1px solid var(--card-b);border-radius:20px;padding:26px 28px;transition:all var(--tr)}
+.gcard:hover{background:var(--card-h);border-color:rgba(0,128,128,.3)}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:stretch}
+.about .text{display:grid;gap:16px;color:var(--text2);font-size:15.5px;align-content:start}
+.info{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 20px;align-content:start}
+.info .wide{grid-column:1/-1}
+.info small{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text3);margin-bottom:3px}
+.info b{font-weight:600;font-size:15px;overflow-wrap:anywhere}
+.ok{display:inline-block;font-size:13px;font-weight:700;color:var(--green);background:rgba(52,199,89,.12);border:1px solid rgba(52,199,89,.3);padding:3px 12px;border-radius:999px}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+@media (max-width:420px){.info{grid-template-columns:1fr}}
+
+/* timeline */
+.tl{position:relative;display:grid;gap:24px;padding-left:38px}
+.tl::before{content:"";position:absolute;left:10px;top:12px;bottom:12px;width:2px;background:linear-gradient(var(--teal),rgba(0,128,128,.08))}
+.job{position:relative;background:var(--card);border:1px solid var(--card-b);border-radius:18px;padding:24px 26px;transition:all var(--tr)}
+.job:hover{background:var(--card-h);border-color:rgba(0,128,128,.35);transform:translateX(4px)}
+.job::before{content:"";position:absolute;left:-33px;top:28px;width:12px;height:12px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(0,128,128,.18),0 0 14px var(--glow)}
+.job-top{display:flex;justify-content:space-between;gap:6px 16px;flex-wrap:wrap;align-items:baseline}
+.job h3{font-size:18.5px;font-weight:700}
+.job .co{color:var(--teal-t);font-weight:600;font-size:14.5px;margin-top:3px}
+.when{font-size:13px;color:var(--text3);white-space:nowrap;font-variant-numeric:tabular-nums}
+.job ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:7px}
+.job li{position:relative;padding-left:18px;font-size:14.5px;color:var(--text2)}
+.job li::before{content:"›";position:absolute;left:2px;top:-1px;color:var(--teal-t);font-weight:700}
+.job li strong{color:var(--text)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tag{font-size:12px;font-weight:500;padding:3px 10px;border-radius:8px;border:1px solid var(--card-b);color:var(--text2);background:rgba(255,255,255,.03)}
+
+/* education */
+.edu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.ed{background:var(--card);border:1px solid var(--card-b);border-radius:18px;padding:22px;display:grid;gap:8px;align-content:start;transition:all var(--tr)}
+.ed:hover{background:var(--card-h);border-color:rgba(0,128,128,.35);transform:translateY(-4px)}
+.ed .when{color:var(--teal-t)}
+.ed h3{font-size:17px;font-weight:700}
+.ed p{color:var(--text2);font-size:14.5px}
+.ico{flex:0 0 42px;width:42px;height:42px;border-radius:12px;background:rgba(0,128,128,.1);border:1px solid rgba(0,128,128,.22);color:var(--teal-t);display:grid;place-items:center}
+.ico svg{width:20px;height:20px}
+@media (max-width:860px){.edu{grid-template-columns:1fr}}
+
+/* portfolio */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.filters button{font:600 14px var(--f-body);padding:8px 18px;border-radius:999px;border:1px solid var(--card-b);background:var(--card);color:var(--text2);cursor:pointer;transition:all var(--tr)}
+.filters button:hover{color:var(--text);border-color:rgba(0,128,128,.4)}
+.filters button[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:var(--on-teal)}
+.filters button span{font-size:11.5px;opacity:.65;margin-left:5px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+@media (max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.grid{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;text-align:left;padding:14px;border:1px solid var(--card-b);border-radius:20px;background:var(--card);color:inherit;font:inherit;cursor:pointer;transition:all var(--tr)}
+.card:hover{background:var(--card-h);border-color:rgba(0,128,128,.4);transform:translateY(-6px);box-shadow:0 20px 40px -20px var(--glow)}
+.card .ph{position:relative;aspect-ratio:16/10;background:#fff;overflow:hidden;border-radius:12px}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card .ph img.contain{object-fit:contain;padding:6%}
+.card:hover .ph img{transform:scale(1.05)}
+.card .n{position:absolute;right:10px;top:10px;font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;background:rgba(6,9,11,.78);color:#fff}
+.card .body{padding:16px 6px 6px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .cat{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:rgba(0,128,128,.12);color:var(--teal-t);border:1px solid rgba(0,128,128,.25)}
+.card h3{font-size:18px;font-weight:700;margin-top:4px}
+.card .client{font-size:13.5px;color:var(--text3)}
+.card .desc{color:var(--text2);font-size:14px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card .tags{margin-top:8px}
+.card .go{margin-top:auto;padding-top:12px;font-size:13.5px;font-weight:700;color:var(--teal-t)}
+
+/* key projects */
+.keys{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.key{background:var(--card);border:1px solid var(--card-b);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:10px;transition:all var(--tr);position:relative;overflow:hidden}
+.key::after{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--teal-d),var(--teal));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.key:hover{background:var(--card-h);border-color:rgba(0,128,128,.35);transform:translateY(-4px)}
+.key:hover::after{transform:scaleX(1)}
+.key .when{color:var(--teal-t);font-weight:600;font-size:12.5px;letter-spacing:.04em}
+.key h3{font-size:19px;font-weight:700}
+.key p{color:var(--text2);font-size:14.5px}
+.key .tags{margin-top:auto;padding-top:6px}
+@media (max-width:860px){.keys{grid-template-columns:1fr}}
+
+/* awards */
+.award{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:22px;align-items:center}
+.award-ph{margin:0;position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--card-b);box-shadow:0 24px 60px -30px var(--glow);background:#000}
+.award-ph img{width:100%;height:auto;transition:transform .6s}
+.award-ph:hover img{transform:scale(1.03)}
+.award-ph figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 18px 14px;font-size:13px;color:#e6eeee;background:linear-gradient(transparent,rgba(0,0,0,.75))}
+.award-txt{background:linear-gradient(180deg,rgba(0,128,128,.12),rgba(255,255,255,.02));border:1px solid rgba(0,128,128,.35);border-radius:22px;padding:30px 28px;display:flex;flex-direction:column;gap:12px;justify-content:center;transition:all var(--tr)}
+.award-txt:hover{border-color:var(--teal-t)}
+.award-txt h3{font-size:clamp(24px,3vw,32px);font-weight:800;letter-spacing:-.02em}
+.award-txt p{color:var(--text2);font-size:15px}
+.ico.big{width:56px;height:56px;flex-basis:56px;border-radius:16px;background:var(--teal);border-color:var(--teal);color:#fff;box-shadow:0 10px 30px -8px var(--glow)}
+.ico.big svg{width:28px;height:28px}
+.alist{display:grid;gap:10px;margin-top:4px}
+.aw{display:flex;align-items:center;gap:14px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid var(--card-b);transition:all var(--tr)}
+.aw:hover{border-color:rgba(0,128,128,.6);background:rgba(0,128,128,.1);transform:translateX(4px)}
+.aw .yr{font-family:var(--f-display);font-weight:800;font-size:18px;color:#fff;background:var(--teal);border-radius:10px;padding:6px 10px;font-variant-numeric:tabular-nums}
+.aw b{display:block;font-size:15.5px}
+.aw small{color:var(--text3);font-size:13px}
+@media (max-width:860px){.award{grid-template-columns:1fr}}
+
+/* certifications */
+.certs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.cert{display:flex;gap:18px;align-items:flex-start;background:var(--card);border:1px solid var(--card-b);border-radius:20px;padding:24px;transition:all var(--tr)}
+.cert:hover{background:var(--card-h);border-color:rgba(0,128,128,.55);transform:translateY(-4px);box-shadow:0 18px 40px -24px var(--glow)}
+.cert .ico{width:52px;height:52px;flex-basis:52px;border-radius:14px;background:var(--teal);border-color:var(--teal);color:#fff}
+.cert .ico svg{width:26px;height:26px}
+.cbody{display:flex;flex-direction:column;gap:6px;min-width:0}
+.cbody .when{color:var(--teal-t);font-weight:600;font-size:12.5px;letter-spacing:.04em}
+.cbody h3{font-size:19px;font-weight:700}
+.cbody .iss{color:var(--text);font-weight:500;font-size:14.5px}
+.cbody p{color:var(--text2);font-size:14.5px}
+.clink{margin-top:8px;align-self:flex-start;font-size:14px;font-weight:700;color:var(--teal-t);text-decoration:none;border-bottom:1px solid transparent;transition:border-color var(--tr)}
+.clink:hover{border-color:var(--teal-t)}
+@media (max-width:760px){.certs{grid-template-columns:1fr}}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.sk{background:var(--card);border:1px solid var(--card-b);border-radius:20px;padding:22px;transition:all var(--tr)}
+.sk:hover{background:var(--card-h);border-color:rgba(0,128,128,.35)}
+.sk h3{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-t);display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.sk h3 .ico{display:none}
+.sk h3::after{content:"";flex:1;height:1px;background:var(--card-b)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font-size:13.5px;padding:6px 12px;border-radius:9px;background:rgba(255,255,255,.04);border:1px solid var(--card-b);color:var(--text2);transition:all var(--tr)}
+.pill:hover{background:rgba(0,128,128,.14);border-color:rgba(0,128,128,.45);color:var(--text)}
+@media (max-width:1000px){.skills{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.skills{grid-template-columns:1fr}}
+
+/* contact */
+.contact{padding-bottom:100px;background:radial-gradient(ellipse 60% 50% at 50% 60%,rgba(0,128,128,.09),transparent 70%)}
+.ccard{max-width:600px;margin:0 auto;text-align:center;background:linear-gradient(180deg,rgba(0,128,128,.06),rgba(255,255,255,.02));border:1px solid var(--card-b);border-radius:26px;padding:36px 28px;display:flex;flex-direction:column;align-items:center}
+.ccard .portrait{margin-top:0;width:104px;height:104px}
+.ccard .avatar span{font-size:32px}
+.ccard h3{font-size:22px;font-weight:700;margin-top:16px}
+.ccard .role{color:var(--text3);font-size:14px;margin-top:4px}
+.clist{display:grid;gap:10px;margin-top:20px;justify-items:center}
+.crow{display:flex;gap:10px;align-items:center;color:var(--text2);font-size:15px;min-width:0;max-width:100%}
+.crow svg{width:17px;height:17px;color:var(--teal-t);flex:0 0 17px}
+.crow b{font-weight:500;overflow-wrap:anywhere;user-select:all}
+.crow a{color:var(--teal-t);text-decoration:none;user-select:auto}
+.crow a:hover{text-decoration:underline}
+.crow .t{color:var(--teal-t)}
+.ccard .actions{margin-top:24px}
+.copied{font-size:13px;color:var(--teal-t);min-height:1.2em;margin-top:10px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;justify-content:center}
+.facts span{font-size:12.5px;border:1px solid var(--card-b);color:var(--text2);padding:4px 12px;border-radius:999px;background:var(--card)}
+
+footer{border-top:1px solid var(--card-b);padding-block:30px;text-align:center;color:var(--text3);font-size:14px}
+footer .wrap{display:grid;gap:4px}
+footer b{color:var(--text);font-weight:600}
+footer em{font-style:normal;color:var(--teal-t)}
+.totop{position:fixed;right:max(18px,calc(env(safe-area-inset-right,0px) + 12px));bottom:max(18px,calc(env(safe-area-inset-bottom,0px) + 12px));z-index:40;width:46px;height:46px;border-radius:50%;border:0;background:var(--teal);color:var(--on-teal);font-size:20px;font-weight:700;cursor:pointer;box-shadow:0 8px 26px -6px var(--glow);transition:all var(--tr)}
+.totop:hover{transform:translateY(-3px);background:var(--teal2)}
+.totop.hide{opacity:0;pointer-events:none}
+
+/* viewer */
+dialog{border:0;padding:0;max-width:none;max-height:none;width:100%;height:100%;background:var(--bg2);color:var(--text)}
+dialog::backdrop{background:rgba(0,0,0,.7)}
+.vw{height:100%;display:grid;grid-template-columns:minmax(0,1fr) 380px;grid-template-rows:auto minmax(0,1fr)}
+.vw-bar{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--card-b);background:var(--bg);padding:12px var(--gr) 12px var(--gl);padding-top:max(12px,env(safe-area-inset-top,0px))}
+.vw-bar .mono{color:var(--text3)}
+.vw-bar .acts{display:flex;gap:8px}
+.ibtn{font:600 13.5px var(--f-body);border:1px solid var(--card-b);background:var(--card);color:var(--text);padding:8px 14px;border-radius:999px;cursor:pointer;transition:all var(--tr)}
+.ibtn:hover{background:var(--teal);border-color:var(--teal);color:var(--on-teal)}
+.vw-stage{display:flex;flex-direction:column;min-height:0;min-width:0;background:#fff;position:relative}
+.vw-main{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:24px}
+.vw-main img{max-height:100%;max-width:100%;object-fit:contain}
+.vw-cap{position:absolute;left:16px;top:14px;font-size:13px;font-weight:600;color:#004040;background:rgba(214,240,240,.95);padding:5px 12px;border-radius:999px}
+.vw-nav{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:0;background:#008080;color:#ffffff;font-size:22px;font-weight:700;cursor:pointer;box-shadow:0 6px 20px -8px rgba(0,0,0,.5)}
+.vw-nav:hover{background:#ffffff;color:#008080}
+.vw-nav.prev{left:14px}.vw-nav.next{right:14px}
+.vw-thumbs{display:flex;gap:8px;overflow-x:auto;padding:12px 16px;border-top:1px solid #e3ecea;background:#f2f6f5}
+.vw-thumbs button{flex:0 0 auto;width:84px;height:60px;padding:0;border:2px solid transparent;border-radius:10px;overflow:hidden;background:#fff;cursor:pointer}
+.vw-thumbs button[aria-current="true"]{border-color:#006666}
+.vw-thumbs img{width:100%;height:100%;object-fit:contain}
+.vw-info{overflow-y:auto;padding:28px 24px;padding-right:max(24px,env(safe-area-inset-right,0px));border-left:1px solid var(--card-b);display:flex;flex-direction:column;gap:18px;padding-bottom:max(28px,env(safe-area-inset-bottom,0px))}
+.vw-info .client{font-size:13.5px;font-weight:600;color:var(--teal-t)}
+.vw-info h3{font-size:27px;font-weight:800;letter-spacing:-.02em;margin-top:4px}
+.vw-info .desc{font-size:15px;color:var(--text2)}
+.vw-info h5{margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text3)}
+.vw-info ul{margin:0;padding:0;list-style:none;display:grid;gap:5px;font-size:14.5px;color:var(--text2)}
+.vw-info li{padding-left:16px;position:relative}
+.vw-info li::before{content:"›";position:absolute;left:2px;top:-1px;color:var(--teal-t);font-weight:700}
+.spec{font-family:var(--f-mono);font-size:13px;border-radius:12px;padding:10px 14px;background:rgba(0,128,128,.1);border:1px solid rgba(0,128,128,.25);color:var(--teal-t)}
+@media (max-width:600px){#vw-prevp,#vw-nextp{display:none}}
+@media (max-width:860px){.vw{grid-template-columns:1fr;grid-template-rows:auto 56vh auto;overflow-y:auto}.vw-info{border-left:0;border-top:1px solid var(--card-b);overflow:visible;padding-left:var(--gl);padding-right:var(--gr)}}
+/* phone & tablet tuning */
+@media (max-width:1060px){.links a.cvlink{margin:6px 0 0;justify-content:center}.links{max-height:calc(100vh - 70px);overflow-y:auto}}
+@media (max-width:640px){
+  section{padding-block:60px}
+  .head{margin-bottom:28px}
+  .head h2{font-size:clamp(28px,8vw,34px)}
+  .hero{padding-block:36px 28px}
+  .portrait{width:112px;height:112px;margin-top:22px}
+  .hero h1{font-size:clamp(40px,12vw,56px);margin-top:20px}
+  .actions{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:10px}
+  .actions .btn{justify-content:center;padding:13px 12px;font-size:14.5px}
+  .actions .btn.primary{grid-column:1/-1}
+  .actions .btn.wide{grid-column:1/-1}
+  .ccard .actions{grid-template-columns:1fr}
+  .stats{margin-top:28px}
+  .scroll{display:none}
+  .gcard{padding:20px}
+  .tl{padding-left:26px}
+  .tl::before{left:5px}
+  .job{padding:18px}
+  .job::before{left:-26px;top:24px}
+  .job-top{flex-direction:column;align-items:flex-start}
+  .filters{flex-wrap:nowrap;overflow-x:auto;margin-inline:calc(-1 * var(--gl)) calc(-1 * var(--gr));padding:2px var(--gr) 8px var(--gl);scrollbar-width:none}
+  .filters::-webkit-scrollbar{display:none}
+  .filters button{flex:0 0 auto}
+  .card{padding:10px}
+  .card .body{padding:14px 6px 6px}
+  .key,.sk,.cert,.ed{padding:20px}
+  .cert{gap:14px}
+  .cert .ico{width:44px;height:44px;flex-basis:44px}
+  .award-txt{padding:22px 20px}
+  .award-ph figcaption{position:static;font-size:12.5px;padding:10px 14px;background:#0b1114;color:var(--text2)}
+  .ccard{padding:28px 18px}
+  .crow{font-size:14px}
+  .totop{width:42px;height:42px}
+  footer{padding-bottom:max(30px,calc(env(safe-area-inset-bottom,0px) + 70px))}
+}
+@media (hover:none){.card:hover,.job:hover,.key:hover,.cert:hover,.ed:hover,.stat:hover,.aw:hover,.btn:hover{transform:none}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8l-9-5-9 5v8l9 5 9-5z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></symbol>
+  <symbol id="i-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></symbol>
+  <symbol id="i-cert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.5 13.5-1.5 8 5-3 5 3-1.5-8"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Arun Sundaran</a>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="links">Menu</button>
+    <nav class="links" id="links" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#awards">Awards</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#skills">Skills</a>
+      <a class="cvlink" href="Arun_Sundaran_CV.pdf" download="Arun_Sundaran_CV.pdf" target="_blank" rel="noopener"><svg width="15" height="15"><use href="#i-dl"/></svg>CV</a>
+      <a class="cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero" id="hero">
+    <canvas id="stars" aria-hidden="true"></canvas>
+    <div class="wrap hero-in">
+      <span class="badge"><b></b>Open to opportunities across the UK</span>
+      <div class="portrait"><div class="avatar"><span>AS</span><img src="img/arun.jpg" alt="Arun Sundaran" onerror="this.remove()"></div><i class="online" title="Available"></i></div>
+      <h1>Arun Sundaran</h1>
+      <p class="sub">Lead Mechanical Design Engineer · Electro-mechanical Product Development</p>
+      <p class="hl">Designing semiconductor, medical and automotive hardware</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact"><svg><use href="#i-mail"/></svg>Get in touch</a>
+        <a class="btn" href="https://www.linkedin.com/in/arun-sundaran-952a62175" target="_blank" rel="noopener"><svg><use href="#i-in"/></svg>LinkedIn</a>
+        <a class="btn" href="Arun_Sundaran_CV.pdf" download="Arun_Sundaran_CV.pdf" target="_blank" rel="noopener"><svg><use href="#i-dl"/></svg>Download CV</a>
+        <a class="btn wide" href="#portfolio">View portfolio ↓</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>10+</b><span>years experience</span></div>
+        <div class="stat"><b>10</b><span>projects shown</span></div>
+        <div class="stat"><b>5</b><span>engineering companies</span></div>
+      </div>
+      <a class="scroll" href="#about"><em></em><span class="mono">Scroll</span></a>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="head"><span class="kicker">About me</span><h2>Engineering products that can be made</h2><p>From injection molds for automotive trims to Philips patient monitoring and ASML semiconductor systems, I bring tooling know-how, design controls and clear documentation to every project.</p></div>
+      <div class="about">
+        <div class="gcard text">
+          <p>I'm a <strong>Lead Mechanical Design Engineer</strong> with more than ten years across regulated medical devices, semiconductor inspection equipment, IoT and connected products, consumer electronics and high-volume manufacturing.</p>
+          <p>I trained in tool and die engineering and spent my first four years designing injection molds for automotive and handheld products. At <span class="hlt">Cyient</span> I delivered ISO 13485 medical-device work for <strong>Philips Healthcare</strong>. At <span class="hlt">Zealogics</span> I led electro-mechanical design and documentation for <strong>ASML</strong> programmes including eScan 1100, eScan 2200 and EXE5000 / NXE 5000, working in Siemens NX and Teamcenter.</p>
+          <p>I'm currently completing a B.Tech in Engineering Technology at <span class="hlt">BITS Pilani</span> alongside work.</p>
+        </div>
+        <div class="gcard info">
+          <div><small>Location</small><b>Huntingdon, UK</b></div>
+          <div><small>Phone</small><b>+44 7717 623450</b></div>
+          <div class="wide"><small>Email</small><b>arunsundaran.uk@gmail.com</b></div>
+          <div><small>Status</small><span class="ok">Full UK work authorisation</span></div>
+          <div><small>Languages</small><b>English, Hindi, Tamil, Malayalam</b></div>
+          <div class="wide"><small>Degree</small><b>B.Tech Engineering Technology, BITS Pilani (2023 – 2027)</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Professional experience</span><h2>Where I've worked</h2><p>From the tool room to regulated medical and semiconductor engineering.</p></div>
+      <div class="tl">
+        <article class="job now">
+          <div class="job-top"><div><h3>Lead Mechanical Design Engineer</h3><div class="co">Zealogics Inc · Remote, UK hours</div></div><span class="when">Jun 2023 – Jun 2026</span></div>
+          <ul>
+            <li>Led design of <strong>precision mechanical assemblies and subsystems</strong> for ASML semiconductor equipment: eScan 1100 legacy conversion, ep5XLE NX conversion, eScan 2200, EXE5000 &amp; NXE 5000 and e-beam projects.</li>
+            <li>BOM management for eScan 1100; cable routing for eScan 2200; ECN release and product lifecycle management in Teamcenter.</li>
+            <li>Led technical writing and illustration, and design and product documentation to ASML standards.</li>
+            <li>Coordinated mechanical, electrical, software, manufacturing and supply-chain teams, managing schedules, budgets, resources and risks across multiple projects.</li>
+            <li>Ran design reviews and technical risk assessments; maintained BOMs, ECOs, manufacturing drawings and assembly procedures.</li>
+            <li>Primary technical interface with the customer; mentored junior engineers.</li>
+          </ul>
+          <div class="tags"><span class="tag">ASML eScan</span><span class="tag">EXE / NXE</span><span class="tag">Siemens NX</span><span class="tag">Teamcenter</span><span class="tag">Capital</span></div>
+        </article>
+        <article class="job">
+          <div class="job-top"><div><h3>Senior Associate Design Engineer, Medical Devices</h3><div class="co">Cyient Ltd · Hyderabad</div></div><span class="when">Feb 2022 – Jun 2023</span></div>
+          <ul>
+            <li>Delivered medical device projects for <strong>Philips Healthcare</strong> patient care monitoring products in an <strong>ISO 13485</strong> environment.</li>
+            <li>Design controls, risk management, DFMEA, DFM reviews, design verification and validation across the product lifecycle.</li>
+            <li>Single-use devices including syringes and face shields; tolerance analysis and material selection for patient monitoring systems.</li>
+            <li>Client communication, engineering change requests, proposal and cost-estimation support.</li>
+          </ul>
+          <div class="tags"><span class="tag">Philips Healthcare</span><span class="tag">HPM machines</span><span class="tag">ISO 13485</span><span class="tag">DFMEA</span></div>
+        </article>
+        <article class="job">
+          <div class="job-top"><div><h3>Senior Associate, Mechanical Design</h3><div class="co">IDoFThings Pvt. Ltd · Cochin</div></div><span class="when">Sep 2019 – Feb 2022</span></div>
+          <ul>
+            <li>Led mechanical design of IoT, consumer and connected products from concept through prototyping, testing and validation.</li>
+            <li>Wrote test plans and validation procedures for reliability and manufacturability.</li>
+            <li>Managed schedules, budgets, procurement and suppliers; presented progress to customers.</li>
+          </ul>
+          <div class="tags"><span class="tag">Cerence</span><span class="tag">Wisilica</span><span class="tag">Transight</span><span class="tag">Gadgeon</span></div>
+        </article>
+        <article class="job">
+          <div class="job-top"><div><h3>Senior Mold Design Engineer</h3><div class="co">VVDN Technologies Pvt. Ltd · Gurgaon</div></div><span class="when">Feb 2019 – Aug 2019</span></div>
+          <ul>
+            <li>Designed high-precision injection molds for telecommunications and consumer electronics components.</li>
+            <li>Applied DFM and GD&amp;T; worked with manufacturing on tooling performance, quality and yield.</li>
+          </ul>
+          <div class="tags"><span class="tag">HDLS-N Tab handheld</span><span class="tag">Consumer electronics</span></div>
+        </article>
+        <article class="job">
+          <div class="job-top"><div><h3>Mold Design Engineer / Assistant Tool Room Engineer</h3><div class="co">Divine Toolings Pvt. Ltd · Pune</div></div><span class="when">Nov 2015 – Dec 2018</span></div>
+          <ul>
+            <li>Designed and validated injection molds for automotive and industrial plastic parts.</li>
+            <li>Troubleshooting, process optimisation and supplier development with customers and production teams.</li>
+          </ul>
+          <div class="tags"><span class="tag">Mahindra trims</span><span class="tag">BEHR HVAC</span><span class="tag">Tata Tiago</span><span class="tag">Motherson</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Education</span><h2>Trained in tooling, still learning</h2></div>
+      <div class="edu">
+        <div class="ed"><span class="ico"><svg><use href="#i-cap"/></svg></span><span class="when" style="justify-self:start">2023 – 2027 · In progress</span><h3>B.Tech in Engineering Technology</h3><p>BITS Pilani – WILP, Rajasthan</p></div>
+        <div class="ed"><span class="ico"><svg><use href="#i-tool"/></svg></span><span class="when" style="justify-self:start">2014 – 2015</span><h3>Post Diploma in Tool Design &amp; Manufacturing</h3><p>Central Tool Room &amp; Training Centre (CTTC), Bhubaneswar</p></div>
+        <div class="ed"><span class="ico"><svg><use href="#i-gear"/></svg></span><span class="when" style="justify-self:start">2010 – 2013</span><h3>Diploma in Tool &amp; Die Engineering</h3><p>Government Polytechnic College, Kerala</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Design portfolio</span><h2>Products and tooling</h2><p>Renders and CAD from product and mold design work. Select a project to see every view.</p></div>
+      <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Key projects</span><h2>Programmes I've led and delivered</h2></div>
+      <div class="keys">
+        <div class="key"><span class="when" style="align-self:flex-start">2023 – 2026 · Zealogics</span><h3>ASML semiconductor programmes</h3><p>eScan 1100 legacy conversion, ep5XLE NX conversion, eScan 2200, EXE5000 &amp; NXE 5000 and e-beam. Mechanical assemblies, cable routing, BOM management, ECN release and technical documentation.</p><div class="tags"><span class="tag">Siemens NX</span><span class="tag">Teamcenter</span><span class="tag">Capital</span><span class="tag">Arbortext</span></div></div>
+        <div class="key"><span class="when" style="align-self:flex-start">2022 – 2023 · Cyient</span><h3>Philips patient monitoring and HPM machines</h3><p>Philips Healthcare patient care monitoring products, HPM machines and single-use devices such as syringes and face shields, developed under ISO 13485 design controls with DFMEA and V&amp;V.</p><div class="tags"><span class="tag">ISO 13485</span><span class="tag">DFMEA</span><span class="tag">Tolerance analysis</span></div></div>
+        <div class="key"><span class="when" style="align-self:flex-start">2019 – 2022 · IDoFThings</span><h3>Connected device family</h3><p>Enclosures for microphone and AI camera boxes, GPS and OBD trackers, from research and CMF to 3D-printed prototypes and tool reviews.</p><div class="tags"><span class="tag">SolidWorks</span><span class="tag">KeyShot</span><span class="tag">SLA / FDM</span></div></div>
+        <div class="key"><span class="when" style="align-self:flex-start">2015 – 2019 · Divine Toolings / VVDN</span><h3>Automotive and handheld tooling</h3><p>Injection molds for Mahindra interior and exterior trims, BEHR HVAC kinematic parts, the Tata Tiago center fascia, Motherson arm rest trim and the HDLS-N Tab handheld.</p><div class="tags"><span class="tag">Unigraphics</span><span class="tag">Hot runner</span><span class="tag">Sliders &amp; lifters</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="awards">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Awards &amp; recognition</span><h2>Recognised for performance</h2></div>
+      <div class="award">
+        <figure class="award-ph"><img src="img/award-1.jpg" alt="Arun Sundaran receiving the Excellence in Execution award on stage at the Zealogics awards" loading="lazy"><figcaption>Excellence in Execution: receiving the award on stage at Zealogics</figcaption></figure>
+        <div class="award-txt">
+          <span class="ico big"><svg><use href="#i-trophy"/></svg></span>
+          <span class="kicker">Zealogics Inc · 2 awards</span>
+          <h3>Performance Award, two years running</h3>
+          <p>Recognised by Zealogics for outstanding performance as Lead Mechanical Design Engineer on ASML semiconductor programmes.</p>
+          <div class="alist">
+            <div class="aw"><span class="yr">2026</span><div><b>Performance Award</b><small>Zealogics Inc</small></div></div>
+            <div class="aw"><span class="yr">2025</span><div><b>Performance Award</b><small>Zealogics Inc</small></div></div>
+          </div>
+          <div class="tags"><span class="tag">Excellence in Execution</span><span class="tag">ASML programmes</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Certifications</span><h2>Always learning</h2><p>Courses completed alongside full-time engineering work.</p></div>
+      <div class="certs">
+        <div class="cert">
+          <span class="ico"><svg><use href="#i-cert"/></svg></span>
+          <div class="cbody">
+            <span class="when">Apr 2025</span>
+            <h3>PMP Basics</h3>
+            <p class="iss">Simplilearn SkillUp</p>
+            <p>Project management fundamentals: planning, scheduling, risk and stakeholder management.</p>
+            <div class="tags"><span class="tag">Project management</span><span class="tag">PMP</span></div>
+            <a class="clink" href="https://www.linkedin.com/posts/arun-sundaran-952a62175_skillup-simplilearn-skillup-share-7317425143662723072-jaOm/" target="_blank" rel="noopener">View on LinkedIn ↗</a>
+          </div>
+        </div>
+        <div class="cert">
+          <span class="ico"><svg><use href="#i-cert"/></svg></span>
+          <div class="cbody">
+            <span class="when">Jan 2025</span>
+            <h3>Power BI for Beginners</h3>
+            <p class="iss">Simplilearn SkillUp</p>
+            <p>Data and business analytics with Microsoft Power BI: data models, reports and dashboards.</p>
+            <div class="tags"><span class="tag">Power BI</span><span class="tag">Data analytics</span></div>
+            <a class="clink" href="https://www.linkedin.com/posts/arun-sundaran-952a62175_skillup-simplilearn-skillup-share-7285003801982386176-ztKQ/" target="_blank" rel="noopener">View on LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="head"><span class="kicker">Skills &amp; tools</span><h2>What I work with</h2></div>
+      <div class="skills">
+        <div class="sk"><h3><span class="ico"><svg><use href="#i-cube"/></svg></span>CAD &amp; design</h3><div class="pills"><span class="pill">Siemens NX / Unigraphics</span><span class="pill">SolidWorks</span><span class="pill">Autodesk Inventor</span><span class="pill">AutoCAD</span><span class="pill">KeyShot</span><span class="pill">Teamcenter (PLM)</span><span class="pill">Capital Configurator</span></div></div>
+        <div class="sk"><h3><span class="ico"><svg><use href="#i-gauge"/></svg></span>Analysis &amp; tolerancing</h3><div class="pills"><span class="pill">FEA analysis</span><span class="pill">GD&amp;T – ASME Y14.5</span><span class="pill">Tolerance stack-up</span><span class="pill">Material selection</span><span class="pill">Reliability testing</span></div></div>
+        <div class="sk"><h3><span class="ico"><svg><use href="#i-check"/></svg></span>Compliance &amp; quality</h3><div class="pills"><span class="pill">ISO 13485</span><span class="pill">Design controls</span><span class="pill">DFMEA &amp; risk management</span><span class="pill">Design V&amp;V</span><span class="pill">Change control</span></div></div>
+        <div class="sk"><h3><span class="ico"><svg><use href="#i-tool"/></svg></span>Manufacturing</h3><div class="pills"><span class="pill">Cable routing &amp; harness</span><span class="pill">DFM</span><span class="pill">DFA</span><span class="pill">Injection molding</span><span class="pill">Mold &amp; tooling design</span><span class="pill">Sheet metal</span><span class="pill">Machining</span></div></div>
+        <div class="sk"><h3><span class="ico"><svg><use href="#i-doc"/></svg></span>Documentation</h3><div class="pills"><span class="pill">BOM management</span><span class="pill">ECN / ECO release</span><span class="pill">Product lifecycle management</span><span class="pill">Technical writing &amp; illustration</span><span class="pill">PTC Arbortext Editor</span><span class="pill">Manufacturing drawings</span><span class="pill">MS Office</span></div></div>
+        <div class="sk"><h3><span class="ico"><svg><use href="#i-users"/></svg></span>Project delivery</h3><div class="pills"><span class="pill">Schedules &amp; budgets</span><span class="pill">Power BI</span><span class="pill">Vendor development</span><span class="pill">Prototype development</span><span class="pill">Supplier management</span><span class="pill">Stakeholder management</span><span class="pill">Mentoring</span><span class="pill">3D printing (SLA / FDM)</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="head center"><span class="kicker">Reach out</span><h2>Let's connect</h2><p>Open to mechanical design, product development and product compliance engineering roles. Based in Huntingdon, UK.</p></div>
+      <div class="ccard">
+        <div class="portrait"><div class="avatar"><span>AS</span><img src="img/arun.jpg" alt="" onerror="this.remove()"></div><i class="online"></i></div>
+        <h3>Arun Sundaran</h3>
+        <p class="role">Lead Mechanical Design Engineer · Electro-mechanical · Medical devices</p>
+        <div class="clist">
+          <div class="crow"><svg><use href="#i-mail"/></svg><b class="t" id="email">arunsundaran.uk@gmail.com</b></div>
+          <div class="crow"><svg><use href="#i-phone"/></svg><b>+44 7717 623450</b></div>
+          <div class="crow"><svg><use href="#i-in"/></svg><a href="https://www.linkedin.com/in/arun-sundaran-952a62175" target="_blank" rel="noopener">linkedin.com/in/arun-sundaran</a></div>
+          <div class="crow"><svg><use href="#i-pin"/></svg><b>Huntingdon, United Kingdom</b></div>
+        </div>
+        <div class="actions">
+          <button class="btn primary" id="copy" type="button"><svg><use href="#i-mail"/></svg>Copy email</button>
+          <a class="btn" href="Arun_Sundaran_CV.pdf" download="Arun_Sundaran_CV.pdf" target="_blank" rel="noopener"><svg><use href="#i-dl"/></svg>Download CV (PDF)</a>
+          <a class="btn" href="https://www.linkedin.com/in/arun-sundaran-952a62175" target="_blank" rel="noopener"><svg><use href="#i-in"/></svg>Message on LinkedIn</a>
+        </div>
+        <span class="copied" id="copied" aria-live="polite"></span>
+        <div class="facts"><span>Full UK work authorisation</span><span>Open to relocation across the UK</span><span>UK and international travel</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 <b>Arun Sundaran</b></span><span>Lead Mechanical Design Engineer · Huntingdon, UK</span><span><em>Every part designed to be made.</em></span></div></footer>
+<button class="totop hide" id="totop" type="button" aria-label="Back to top">↑</button>
+
+<dialog id="viewer" aria-labelledby="vw-title">
+  <div class="vw">
+    <div class="vw-bar">
+      <span class="mono" id="vw-pos"></span>
+      <div class="acts">
+        <button class="ibtn" id="vw-prevp" type="button">‹ Prev project</button>
+        <button class="ibtn" id="vw-nextp" type="button">Next project ›</button>
+        <button class="ibtn" id="vw-close" type="button">Close ✕</button>
+      </div>
+    </div>
+    <div class="vw-stage">
+      <div class="vw-main"><img id="vw-img" alt=""></div>
+      <span class="vw-cap" id="vw-cap"></span>
+      <button class="vw-nav prev" id="vw-prev" type="button" aria-label="Previous image">‹</button>
+      <button class="vw-nav next" id="vw-next" type="button" aria-label="Next image">›</button>
+      <div class="vw-thumbs" id="vw-thumbs"></div>
+    </div>
+    <aside class="vw-info" id="vw-info"></aside>
+  </div>
+</dialog>
+
+<script>
+const ID=["Design research","Usability study","Visualization","Proof of concept","Prototyping"];
+const MD=["Detailed design & BOM","Prototype evaluation","Manufacturing feasibility check","Validation & testing"];
+const SW=["SolidWorks","KeyShot 9.0","Simplify3D","Photon S slicer"];
+const P=[
+ {id:"asmlc",g:"zeal",client:"ASML · Semiconductor equipment",title:"ASML Systems: Cabinets, Supply Units & Cable Routing",tags:["Siemens NX","Teamcenter"],
+  desc:"Electro-mechanical design for ASML semiconductor systems, including eScan 1100 legacy conversion, ep5XLE NX conversion, eScan 2200, EXE5000 / NXE 5000 and e-beam projects. Work covered sheet-metal cabinets and supply-unit enclosures, component layout, cable routing and wiring harnesses in NX, form-board drawings, BOM management, and ECN release and lifecycle management in Teamcenter, all documented to ASML standards.",
+  md:["Precision mechanical assemblies and subsystems","Sheet-metal cabinet and enclosure design","NX cable routing and wiring harness","Form-board drawings","BOM management and ECN release","Design reviews and technical risk assessments","Technical writing and illustration"],
+  sw:["Siemens NX (UG-NX 12.0)","Teamcenter","Capital Configurator","PTC Arbortext Editor"],
+  imgs:[["asml-1","ASML system overview"],["asml-2","NX cable routing model"],["asmlc-1","Illustration of an equipment electrical cabinet (not an ASML image)"],["asmlc-2","Illustration of a 19-inch rack supply unit (not an ASML image)"]]},
+ {id:"phil",g:"cyient",client:"Philips Healthcare · HPM",title:"Patient Care Monitoring",tags:["Medical","ISO 13485"],
+  link:["https://www.philips.co.uk/healthcare/product/HC867030/intellivue-x3-patient-monitor","See the IntelliVue X3 on philips.co.uk"],
+  desc:"Mechanical engineering for Philips Hospital Patient Monitoring (HPM) products, including the IntelliVue X3, a compact transport monitor with a 6.1-inch touchscreen that measures ECG, SpO2, respiration and blood pressure. Work was carried out at Cyient within an ISO 13485 design-control process.",
+  md:["Detailed mechanical design and design reviews","Tolerance analysis and material selection","Design controls, DFMEA and risk management","DFM reviews","Design verification and validation evidence","Engineering change requests and client reporting"],
+  imgs:[["phil-1","Illustration of a transport patient monitor (not a Philips image)"]]},
+ {id:"hug",g:"recent",client:"HUG · Medical device",title:"Negative Pressure Wound Therapy Machine",tags:["Medical","Industrial design","Mechanical design"],
+  desc:"A negative pressure wound therapy machine applies gentle suction to wounds, promoting healing by reducing swelling, improving blood circulation and managing wound fluids. It accelerates tissue repair, reduces infection risk and supports complex wound care across medical settings.",
+  id_:["Design research","Usability study","Visualization","Prototyping"],md:[...MD,"Technical documentation","Tool review & discussion with mold manufacturer"],
+  imgs:[["hug-1","Front view with touchscreen"],["hug-2","Rear view and canister"],["hug-3","Detail"]]},
+ {id:"cer",g:"idot",client:"Cerence",title:"MIC Box & AI Box",tags:["CMF","Prototyping"],
+  desc:"A microphone box, its desk stand and an AI box with camera head for Cerence. Colour, material and finish were specified part by part, and prototypes were printed in-house.",
+  id_:ID,md:MD,sw:SW,imgs:[["cer-4","AI box camera head"],["cer-1","MIC box"],["cer-2","AI box: colour, material, finish"],["cer-3","MIC box: colour, material, finish"],["cer-5","MIC box stand"]]},
+ {id:"obd",g:"idot",client:"Transight",title:"OBD Tracker",tags:["Telematics"],
+  desc:"Plug-in OBD tracker for Transight with a translucent upper cover, developed from research to proof of concept.",
+  id_:["Design research","Usability study","Visualization","Proof of concept"],sw:SW,imgs:[["obd-1","OBD tracker"]]},
+ {id:"tr",g:"idot",client:"Transight",title:"GPS Tracker",tags:["Telematics","Mold review"],
+  desc:"Vehicle GPS tracker enclosure for Transight, taken from design research through detailed design to mold design review.",
+  id_:["Design research","Usability study","Visualization","Proof of concept"],md:[...MD,"Mold design review"],sw:SW,
+  imgs:[["tr-1","GPS tracker with cable"],["tr-3","Tracker enclosure"],["tr-2","Render on grey"]]},
+ {id:"tiago",g:"mold",client:"Tata Tiago",title:"Center Fascia",size:"696 × 980 × 796",
+  feats:["Angular and straight sliders for snaps","5° lifters for snaps","2-drop manifold hot runner","Hydraulic cylinder ejection"],
+  desc:"Injection mold for the center fascia trim of the Tata Tiago. Snap undercuts are released by a ring of angular and straight sliders and 5° lifters; the part is fed by a 2-drop manifold hot runner and ejected hydraulically.",
+  imgs:[["tiago-1","Mold assembly · 696 × 980 × 796"],["tiago-4","Part"],["tiago-2","Moving half design"],["tiago-3","Fixed half design"],["tiago-5","Sliders for snaps (angular and straight)"],["tiago-6","Lifters for snaps (5°)"],["tiago-7","2-drop manifold hot runner system"],["tiago-8","Hydraulic cylinder ejection"]]},
+ {id:"como",g:"mold",client:"COMO",title:"Protection Cap",size:"350 × 446 × 384",
+  feats:["Rack and pinion mechanism","Slider with hydraulic actuation","Runner stripper assembly"],
+  desc:"Multi-cavity mold for a threaded protection cap. A rack and pinion drives the core mechanism, sliders are actuated by a cylinder, and the fixed half carries a runner stripper assembly.",
+  imgs:[["como-1","Slider and part assembly"],["como-2","Part"],["como-3","Part, side"],["como-6","Mold assembly · 350 × 446 × 384"],["como-5","Moving half design"],["como-7","Fixed half design"],["como-4","Mold with hydraulic slider"],["como-8","Rack and pinion mechanism"],["como-9","Rack and pinion detail"],["como-10","Fixed half with runner stripper assembly"],["como-11","Part, slider and pin (section view)"]]},
+ {id:"grab",g:"mold",client:"Automotive",title:"Grab Handle, Outer Front Door LH + RH",size:"350 × 600 × 420",
+  feats:["Cumsa sprung cores for undercuts","Hot bush feed","Double ejection"],
+  desc:"Family mold for left and right outer front-door grab handles. Undercuts are released by Cumsa sprung cores, the part is fed through a hot bush, and a double-ejection system clears the deep ribs.",
+  imgs:[["grab-1","Mold assembly · 350 × 600 × 420"],["grab-2","Part"],["grab-3","Part, inner"],["grab-5","Fixed half design"],["grab-4","Moving half design"],["grab-6","Hot bush"],["grab-7","Cumsa sprung core with part"],["grab-8","Double ejection"],["grab-9","Red pins: undercuts"]]},
+ {id:"arm",g:"mold",client:"Motherson",title:"Arm Rest Trim",size:"600 × 720 × 457",
+  feats:["Combined lifters and sliders for undercuts","Multi-direction core actions"],
+  desc:"Mold for an arm rest trim panel for Motherson, with a dense set of lifters and sliders releasing undercuts around the whole part.",
+  imgs:[["arm-1","Lifters and sliders for undercuts"],["arm-5","Part"],["arm-6","Part, rear"],["arm-2","Mold assembly · 600 × 720 × 457"],["arm-4","Fixed half design"],["arm-3","Moving half design"],["arm-7","Lifter and slider layout"]]}
+];
+P.forEach(p=>{if(p.g==="mold"){p.sw=["Unigraphics","AutoCAD"];p.tags=["Injection mold"];}});
+
+P.forEach(p=>{if(p.g==="mold"){p.sw=["Unigraphics","AutoCAD"];p.tags=["Injection mold","Unigraphics"];}});
+const CAT={asmlc:"industrial",phil:"medical",hug:"medical",cer:"iot",obd:"iot",tr:"iot",tiago:"mold",como:"mold",grab:"mold",arm:"mold"};
+const CATN={medical:"Medical",iot:"IoT & telematics",industrial:"Industrial",mold:"Mold design"};
+const ERA={zeal:"Zealogics · 2023–2026",cyient:"Cyient · 2022–2023",recent:"Portfolio 2024",idot:"IDoFThings · 2019–2022",mold:"Divine Toolings / VVDN · 2015–2019"};
+const containSet=new Set(["cer-4","obd-1","asml-1","tr-1","cer-1","tiago-1","como-1","grab-1","arm-1"]);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+const filtersEl=document.getElementById("filters"),grid=document.getElementById("grid");
+const F=[["all","All projects"],...Object.entries(CATN)];
+filtersEl.innerHTML=F.map(([k,n])=>`<button type="button" data-f="${k}" aria-pressed="${k==="all"}">${n}<span>${k==="all"?P.length:P.filter(p=>CAT[p.id]===k).length}</span></button>`).join("");
+function draw(f){
+  grid.innerHTML=P.map((p,i)=>{
+    if(f!=="all"&&CAT[p.id]!==f)return "";
+    const c=p.imgs[0][0];
+    return `<button class="card" type="button" data-i="${i}">
+      <div class="ph"><img src="img/${c}.jpg" alt="${esc(p.title)}" loading="lazy" class="${containSet.has(c)?"contain":""}">${p.imgs.length>1?`<span class="n">${p.imgs.length} views</span>`:""}</div>
+      <div class="body"><span class="cat">${CATN[CAT[p.id]]}</span><h3>${esc(p.title)}</h3><span class="client">${esc(p.client)} · ${ERA[p.g]}</span><p class="desc">${esc(p.desc)}</p>
+      <div class="tags">${(p.sw||p.tags||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
+      <span class="go">${p.g==="mold"?"Click to view mold design →":"Click to view design →"}</span></div></button>`;
+  }).join("");
+}
+draw("all");
+filtersEl.addEventListener("click",e=>{const b=e.target.closest("[data-f]");if(!b)return;filtersEl.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));draw(b.dataset.f);});
+
+/* viewer */
+const dlg=document.getElementById("viewer"),vImg=document.getElementById("vw-img"),vCap=document.getElementById("vw-cap"),vTh=document.getElementById("vw-thumbs"),vInfo=document.getElementById("vw-info"),vPos=document.getElementById("vw-pos");
+let cur=0,img=0;
+const list=(h,a)=>a&&a.length?`<div><h5>${h}</h5><ul>${a.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:"";
+function render(){
+  const p=P[cur];
+  vPos.textContent=`${CATN[CAT[p.id]]} · ${cur+1} / ${P.length}`;
+  vInfo.innerHTML=`<div><span class="client">${esc(p.client)} · ${ERA[p.g]}</span><h3 id="vw-title">${esc(p.title)}</h3></div><p class="desc">${esc(p.desc)}</p>${p.size?`<div class="spec">Mold size · ${p.size} mm</div>`:""}${list("Industrial design",p.id_)}${list("Mechanical design",p.md)}${list("Mold features",p.feats)}${list("Software",p.sw)}${list("3D printers",p.printers)}${p.link?`<a class="btn" href="${p.link[0]}" target="_blank" rel="noopener" style="align-self:flex-start">${esc(p.link[1])} ↗</a>`:""}`;
+  vTh.innerHTML=p.imgs.map((m,k)=>`<button type="button" data-k="${k}" aria-label="${esc(m[1])}"><img src="img/${m[0]}.jpg" alt=""></button>`).join("");
+  const many=p.imgs.length>1;vTh.hidden=!many;document.getElementById("vw-prev").hidden=document.getElementById("vw-next").hidden=!many;
+  show();
+}
+function show(){const p=P[cur],m=p.imgs[img];vImg.src=`img/${m[0]}.jpg`;vImg.alt=`${p.title}: ${m[1]}`;vCap.textContent=`${img+1}/${p.imgs.length} · ${m[1]}`;vTh.querySelectorAll("button").forEach((b,k)=>b.setAttribute("aria-current",k===img));const a=vTh.children[img];if(a)a.scrollIntoView({block:"nearest",inline:"nearest"});}
+grid.addEventListener("click",e=>{const b=e.target.closest("[data-i]");if(!b)return;cur=+b.dataset.i;img=0;render();dlg.showModal();});
+vTh.addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(b){img=+b.dataset.k;show();}});
+const step=d=>{const n=P[cur].imgs.length;img=(img+d+n)%n;show();};
+const proj=d=>{cur=(cur+d+P.length)%P.length;img=0;render();};
+document.getElementById("vw-prev").onclick=()=>step(-1);document.getElementById("vw-next").onclick=()=>step(1);
+document.getElementById("vw-prevp").onclick=()=>proj(-1);document.getElementById("vw-nextp").onclick=()=>proj(1);
+document.getElementById("vw-close").onclick=()=>dlg.close();
+dlg.addEventListener("keydown",e=>{if(e.key==="ArrowRight")step(1);if(e.key==="ArrowLeft")step(-1);});
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close();});
+
+/* menu */
+const burger=document.getElementById("burger"),links=document.getElementById("links");
+burger.onclick=()=>{const o=links.classList.toggle("open");burger.setAttribute("aria-expanded",o);burger.textContent=o?"Close":"Menu";};
+links.addEventListener("click",e=>{if(e.target.closest("a")&&links.classList.contains("open"))burger.click();});
+
+/* copy */
+document.getElementById("copy").addEventListener("click",()=>{
+  const el=document.getElementById("email"),o=document.getElementById("copied");
+  const sel=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);o.textContent="Email selected. Press Ctrl+C to copy.";};
+  try{navigator.clipboard.writeText(el.textContent).then(()=>{o.textContent="Email copied";},sel);}catch(e){sel();}
+});
+
+/* scroll: progress bar, active link, back-to-top, parallax */
+const nav=document.getElementById("nav"),toTop=document.getElementById("totop"),navLinks=[...links.querySelectorAll("a")];
+const secIds=["about","experience","portfolio","skills","contact"],secMap={education:"experience",projects:"portfolio"};
+const allSecs=[...document.querySelectorAll("main section")];
+const pxEls=[...document.querySelectorAll(".px")],still=matchMedia("(prefers-reduced-motion: reduce)");
+toTop.onclick=()=>scrollTo({top:0,behavior:still.matches?"auto":"smooth"});
+let tick=false;
+function frame(){
+  tick=false;const y=scrollY,vh=innerHeight,max=document.documentElement.scrollHeight-vh;
+  nav.classList.toggle("scrolled",y>8);nav.style.setProperty("--prog",max>0?(y/max).toFixed(4):0);
+  toTop.classList.toggle("hide",y<600);
+  let act=null;allSecs.forEach(s=>{const r=s.getBoundingClientRect();if(r.top<=vh*.35&&r.bottom>vh*.35)act=secMap[s.id]||s.id;});
+  if(y>=max-4)act="contact";
+  navLinks.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+act));
+  if(still.matches)return;
+  pxEls.forEach(el=>{const r=el.parentElement.getBoundingClientRect();if(r.bottom<-200||r.top>vh+200)return;el.style.transform=`translate3d(0,${((r.top+r.height/2-vh/2)*(+el.dataset.speed||0)).toFixed(1)}px,0)`;});
+}
+addEventListener("scroll",()=>{if(!tick){tick=true;requestAnimationFrame(frame);}},{passive:true});
+addEventListener("resize",frame);frame();
+
+/* starfield */
+(function(){
+  const c=document.getElementById("stars");if(!c)return;const x=c.getContext("2d");let W,H,S=[],raf;
+  const dpr=Math.min(devicePixelRatio||1,2);
+  function size(){W=c.offsetWidth;H=c.offsetHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);
+    const n=Math.round(W*H/5200);S=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.3+.3,a:Math.random()*.6+.2,t:Math.random()*6.28,s:Math.random()*.02+.005,v:Math.random()*.12+.02,teal:Math.random()<.18}));}
+  function draw(move){x.clearRect(0,0,W,H);for(const p of S){if(move){p.t+=p.s;p.y-=p.v;if(p.y<-2){p.y=H+2;p.x=Math.random()*W;}}
+    const a=p.a*(.6+.4*Math.sin(p.t));x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fillStyle=p.teal?`rgba(0,128,128,${a})`:`rgba(255,255,255,${a})`;x.fill();}}
+  const still=matchMedia("(prefers-reduced-motion: reduce)");
+  function loop(){draw(true);raf=requestAnimationFrame(loop);}
+  size();draw(false);if(!still.matches)loop();
+  addEventListener("resize",()=>{size();draw(false);});
+  document.addEventListener("visibilitychange",()=>{if(document.hidden)cancelAnimationFrame(raf);else if(!still.matches)loop();});
+})();
+</script>
