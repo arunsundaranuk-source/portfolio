@@ -360,7 +360,7 @@ dialog::backdrop{background:rgba(0,0,0,.7)}
     <canvas id="stars" aria-hidden="true"></canvas>
     <div class="wrap hero-in">
       <span class="badge"><b></b>Open to opportunities across the UK</span>
-      <div class="portrait"><div class="avatar"><span>AS</span><img src="img/arun.jpg" alt="Arun Sundaran" onerror="this.remove()"></div><i class="online" title="Available"></i></div>
+      <div class="portrait"><div class="avatar"><span>AS</span><img src="arun.jpg" alt="Arun Sundaran" onerror="this.remove()"></div><i class="online" title="Available"></i></div>
       <h1>Arun Sundaran</h1>
       <p class="sub">Lead Mechanical Design Engineer · Electro-mechanical Product Development</p>
       <p class="hl">Designing semiconductor, medical and automotive hardware</p>
@@ -490,7 +490,7 @@ dialog::backdrop{background:rgba(0,0,0,.7)}
     <div class="wrap">
       <div class="head"><span class="kicker">Awards &amp; recognition</span><h2>Recognised for performance</h2></div>
       <div class="award">
-        <figure class="award-ph"><img src="img/award-1.jpg" alt="Arun Sundaran receiving the Excellence in Execution award on stage at the Zealogics awards" loading="lazy"><figcaption>Excellence in Execution: receiving the award on stage at Zealogics</figcaption></figure>
+        <figure class="award-ph"><img src="award-1.jpg" alt="Arun Sundaran receiving the Excellence in Execution award on stage at the Zealogics awards" loading="lazy"><figcaption>Excellence in Execution: receiving the award on stage at Zealogics</figcaption></figure>
         <div class="award-txt">
           <span class="ico big"><svg><use href="#i-trophy"/></svg></span>
           <span class="kicker">Zealogics Inc · 2 awards</span>
@@ -554,7 +554,7 @@ dialog::backdrop{background:rgba(0,0,0,.7)}
     <div class="wrap">
       <div class="head center"><span class="kicker">Reach out</span><h2>Let's connect</h2><p>Open to mechanical design, product development and product compliance engineering roles. Based in Huntingdon, UK.</p></div>
       <div class="ccard">
-        <div class="portrait"><div class="avatar"><span>AS</span><img src="img/arun.jpg" alt="" onerror="this.remove()"></div><i class="online"></i></div>
+        <div class="portrait"><div class="avatar"><span>AS</span><img src="arun.jpg" alt="" onerror="this.remove()"></div><i class="online"></i></div>
         <h3>Arun Sundaran</h3>
         <p class="role">Lead Mechanical Design Engineer · Electro-mechanical · Medical devices</p>
         <div class="clist">
@@ -662,7 +662,7 @@ function draw(f){
     if(f!=="all"&&CAT[p.id]!==f)return "";
     const c=p.imgs[0][0];
     return `<button class="card" type="button" data-i="${i}">
-      <div class="ph"><img src="img/${c}.jpg" alt="${esc(p.title)}" loading="lazy" class="${containSet.has(c)?"contain":""}">${p.imgs.length>1?`<span class="n">${p.imgs.length} views</span>`:""}</div>
+      <div class="ph"><img src="${c}.jpg" alt="${esc(p.title)}" loading="lazy" class="${containSet.has(c)?"contain":""}">${p.imgs.length>1?`<span class="n">${p.imgs.length} views</span>`:""}</div>
       <div class="body"><span class="cat">${CATN[CAT[p.id]]}</span><h3>${esc(p.title)}</h3><span class="client">${esc(p.client)} · ${ERA[p.g]}</span><p class="desc">${esc(p.desc)}</p>
       <div class="tags">${(p.sw||p.tags||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
       <span class="go">${p.g==="mold"?"Click to view mold design →":"Click to view design →"}</span></div></button>`;
@@ -679,11 +679,11 @@ function render(){
   const p=P[cur];
   vPos.textContent=`${CATN[CAT[p.id]]} · ${cur+1} / ${P.length}`;
   vInfo.innerHTML=`<div><span class="client">${esc(p.client)} · ${ERA[p.g]}</span><h3 id="vw-title">${esc(p.title)}</h3></div><p class="desc">${esc(p.desc)}</p>${p.size?`<div class="spec">Mold size · ${p.size} mm</div>`:""}${list("Industrial design",p.id_)}${list("Mechanical design",p.md)}${list("Mold features",p.feats)}${list("Software",p.sw)}${list("3D printers",p.printers)}${p.link?`<a class="btn" href="${p.link[0]}" target="_blank" rel="noopener" style="align-self:flex-start">${esc(p.link[1])} ↗</a>`:""}`;
-  vTh.innerHTML=p.imgs.map((m,k)=>`<button type="button" data-k="${k}" aria-label="${esc(m[1])}"><img src="img/${m[0]}.jpg" alt=""></button>`).join("");
+  vTh.innerHTML=p.imgs.map((m,k)=>`<button type="button" data-k="${k}" aria-label="${esc(m[1])}"><img src="${m[0]}.jpg" alt=""></button>`).join("");
   const many=p.imgs.length>1;vTh.hidden=!many;document.getElementById("vw-prev").hidden=document.getElementById("vw-next").hidden=!many;
   show();
 }
-function show(){const p=P[cur],m=p.imgs[img];vImg.src=`img/${m[0]}.jpg`;vImg.alt=`${p.title}: ${m[1]}`;vCap.textContent=`${img+1}/${p.imgs.length} · ${m[1]}`;vTh.querySelectorAll("button").forEach((b,k)=>b.setAttribute("aria-current",k===img));const a=vTh.children[img];if(a)a.scrollIntoView({block:"nearest",inline:"nearest"});}
+function show(){const p=P[cur],m=p.imgs[img];vImg.src=`${m[0]}.jpg`;vImg.alt=`${p.title}: ${m[1]}`;vCap.textContent=`${img+1}/${p.imgs.length} · ${m[1]}`;vTh.querySelectorAll("button").forEach((b,k)=>b.setAttribute("aria-current",k===img));const a=vTh.children[img];if(a)a.scrollIntoView({block:"nearest",inline:"nearest"});}
 grid.addEventListener("click",e=>{const b=e.target.closest("[data-i]");if(!b)return;cur=+b.dataset.i;img=0;render();dlg.showModal();});
 vTh.addEventListener("click",e=>{const b=e.target.closest("[data-k]");if(b){img=+b.dataset.k;show();}});
 const step=d=>{const n=P[cur].imgs.length;img=(img+d+n)%n;show();};
